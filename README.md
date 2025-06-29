@@ -1,72 +1,102 @@
-Data Warehouse and Analytics Project
-Welcome to the Data Warehouse and Analytics Project repository! 🚀
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
+# 📊 Data Warehouse and Analytics Project
 
-🏗️ Data Architecture
-The data architecture for this project follows Medallion Architecture Bronze, Silver, and Gold layers: Data Architecture
+Welcome to the **Data Warehouse and Analytics Project** repository! 🚀  
+This portfolio project showcases a complete end-to-end data warehousing and analytics solution—from raw data ingestion to business intelligence reporting. It follows **industry best practices** in data engineering and analytics.
+
+---
+
+## 🏗️ Data Architecture
+
+This project follows the **Medallion Architecture**, structured into three layers:
+
 ![data_architecture](https://github.com/user-attachments/assets/1f295203-e8ab-4b6c-9de9-9df0514cceab)
-Bronze Layer: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
-Silver Layer: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
-Gold Layer: Houses business-ready data modeled into a star schema required for reporting and analytics.
-📖 Project Overview
+
+- **Bronze Layer**: Stores raw data ingested *as-is* from source systems (CSV files) into a SQL Server database.  
+- **Silver Layer**: Processes and transforms data with cleansing, standardization, and normalization techniques.  
+- **Gold Layer**: Contains **business-ready**, analytics-optimized data modeled using a **star schema**.
+
+---
+
+## 📖 Project Overview
+
 This project involves:
 
-Data Architecture: Designing a Modern Data Warehouse Using Medallion Architecture Bronze, Silver, and Gold layers.
-ETL Pipelines: Extracting, transforming, and loading data from source systems into the warehouse.
-Data Modeling: Developing fact and dimension tables optimized for analytical queries.
-Analytics & Reporting: Creating SQL-based reports and dashboards for actionable insights.
+- **Data Architecture**: Building a modern warehouse with Medallion Architecture (Bronze, Silver, Gold).
+- **ETL Pipelines**: Extracting, transforming, and loading data from ERP and CRM CSVs.
+- **Data Modeling**: Designing fact and dimension tables for optimized analytical queries.
+- **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable business insights.
 
-Everything is for Free!
-Datasets: Access to the project dataset (csv files).
-SQL Server Express: Lightweight server for hosting your SQL database.
-SQL Server Management Studio (SSMS): GUI for managing and interacting with databases.
-Git Repository: Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
-DrawIO: Design data architecture, models, flows, and diagrams.
-Notion: Get the Project Template from Notion
-Notion Project Steps: Access to All Project Phases and Tasks.
-🚀 Project Requirements
-Building the Data Warehouse (Data Engineering)
-Objective
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
+---
 
-Specifications
-Data Sources: Import data from two source systems (ERP and CRM) provided as CSV files.
-Data Quality: Cleanse and resolve data quality issues prior to analysis.
-Integration: Combine both sources into a single, user-friendly data model designed for analytical queries.
-Scope: Focus on the latest dataset only; historization of data is not required.
-Documentation: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
-BI: Analytics & Reporting (Data Analysis)
-Objective
-Develop SQL-based analytics to deliver detailed insights into:
+## 🧰 Tools & Resources
 
-Customer Behavior
-Product Performance
-Sales Trends
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.
+Everything is **100% free** and open-source!
 
-For more details, refer to docs/requirements.md.
+- 📂 **Datasets**: ERP and CRM CSV files  
+- 🧩 **SQL Server Express**: Lightweight SQL Server instance  
+- 🖥️ **SQL Server Management Studio (SSMS)**: GUI for SQL Server  
+- 🧠 **Draw.io**: For data modeling and architecture diagrams  
+- 💡 **Notion**: Project templates and documentation  
+- 💻 **GitHub**: For version control and collaboration
 
-📂 Repository Structure
+---
+
+## 🚀 Project Requirements
+
+### 🧱 Part 1: Building the Data Warehouse (Engineering)
+
+**Goal**: Develop a modern data warehouse using SQL Server for unified, analytics-ready sales data.
+
+**Specifications**:
+- Import data from two sources (ERP and CRM, in CSV format).
+- Cleanse and resolve data quality issues.
+- Integrate data into a **single analytical model**.
+- Focus on the **most recent data** (no historization required).
+- Document the data model for stakeholders and analysts.
+
+---
+
+### 📊 Part 2: Business Intelligence & Reporting (Analysis)
+
+**Goal**: Use SQL to analyze data and generate business insights.
+
+**Insights Provided**:
+- Customer Behavior
+- Product Performance
+- Sales Trends
+
+These insights help drive **data-driven decision-making**.
+
+📄 For full details, see [`docs/requirements.md`](docs/requirements.md)
+
+---
+
+## 📂 Repository Structure
+## 📂 Repository Structure
+
+```bash
 data-warehouse-project/
 │
-├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
+├── datasets/                      # Raw datasets used for the project (ERP and CRM data)
 │
-├── docs/                               # Project documentation and architecture details
-│   ├── etl.drawio                      # Draw.io file shows all different techniquies and methods of ETL
-│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
-│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
-│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
-│   ├── data_models.drawio              # Draw.io file for data models (star schema)
-│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
+├── docs/                          # Project documentation and architecture details
+│   ├── etl.drawio                 # Draw.io file showing ETL techniques and flow
+│   ├── data_architecture.drawio   # Diagram of the overall data warehouse architecture
+│   ├── data_catalog.md            # Metadata and field descriptions of datasets
+│   ├── data_flow.drawio           # Visual data flow from source to destination
+│   ├── data_models.drawio         # Star schema and data model designs
+│   ├── naming-conventions.md      # Standards for naming tables, fields, and files
 │
-├── scripts/                            # SQL scripts for ETL and transformations
-│   ├── bronze/                         # Scripts for extracting and loading raw data
-│   ├── silver/                         # Scripts for cleaning and transforming data
-│   ├── gold/                           # Scripts for creating analytical models
+├── scripts/                       # SQL scripts for ETL and transformation
+│   ├── bronze/                    # Scripts for loading raw data (Bronze layer)
+│   ├── silver/                    # Scripts for data cleansing and transformation (Silver layer)
+│   ├── gold/                      # Scripts for building the analytical model (Gold layer)
 │
-├── tests/                              # Test scripts and quality files
+├── tests/                         # Data quality checks and testing scripts
 │
-├── README.md                           # Project overview and instructions
-├── LICENSE                             # License information for the repository
-├── .gitignore                          # Files and directories to be ignored by Git
-└── requirements.txt                    # Dependencies and requirements for the project
+├── README.md                      # Project overview and setup instructions
+├── LICENSE                        # License file for this repository
+├── .gitignore                     # Git ignore rules for files and folders
+└── requirements.txt               # Required software/tools and setup dependencies
+
+
