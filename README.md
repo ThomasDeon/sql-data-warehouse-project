@@ -72,7 +72,6 @@ These insights help drive **data-driven decision-making**.
 ---
 
 ## 📂 Repository Structure
-## 📂 Repository Structure
 
 ```bash
 data-warehouse-project/
